@@ -5,7 +5,8 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/CollectionUtils"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/CollectionUtils"/>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="/home/justin/Desktop/WordsHelper/lib/commons-collections4-4.3.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

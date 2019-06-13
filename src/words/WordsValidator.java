@@ -10,8 +10,22 @@ import org.apache.commons.collections4.CollectionUtils;
  */
 
 public class WordsValidator {
+	private WordsDictionary dict;
 	
-	public WordsValidator() {}
+	public WordsValidator(WordsDictionary dict) {
+		this.dict = dict;
+	}
+	
+	public boolean isValidWord(String word) {
+		int size = word.length();
+		List<String> wordList = dict.getWordListOfSize(size);
+		
+		if (wordList.contains(word)) {
+			return true;
+		}
+		
+		return false;
+	}
 	
 	/*
 	 * Builds a list of valid Words for the given Section of the Board.
@@ -22,7 +36,7 @@ public class WordsValidator {
 	 * 
 	 * @return 			  a List of all valid Words that can be played in the given Section
 	 */
-	public List<String> buildListOfValidWordsForSection(List<Character> playerTiles, WordsSection section, WordsDictionary dict) {
+	public List<String> buildListOfValidWordsForSection(List<Character> playerTiles, WordsSection section) {
 		// takes in a section of the board, in the form of a char[], where a word can be played
 		// $fixed contains indices of chars that are already on the board
 		// return a List of all valid words that can be played in the given section using the player's current tiles

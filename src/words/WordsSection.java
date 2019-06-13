@@ -56,8 +56,23 @@ public class WordsSection {
 		return letters;
 	}
 	
+	
+	
 	public void setOrigin(int[] newOrigin) {
 		origin = newOrigin;
+	}
+	
+	public void setSize(int newSize) {
+		size = newSize;
+	}
+	
+	public void printSection() {
+		for (char c : letters) {
+			if (c != 0)
+				System.out.print(c);
+			else
+				System.out.print("-");
+		}
 	}
 
 }
