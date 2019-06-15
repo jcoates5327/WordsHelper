@@ -22,8 +22,8 @@ public class WordsHelper {
 		WordsBoardScanner sc = new WordsBoardScanner(tiles);
 
 		try {
-			sc.scanHorizontalSections();
-			sc.scanVerticalSections();
+			System.out.println(sc.scanHorizontalSections());
+			System.out.println(sc.scanVerticalSections());
 			
 //			BufferedWriter wr = new BufferedWriter(new FileWriter("blank board.txt"));
 //			for (int i = 0; i < 15; i++) {

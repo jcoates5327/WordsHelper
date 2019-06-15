@@ -13,7 +13,7 @@ public class WordsBoardScanner {
 		this.playerTiles = playerTiles;
 	}
 
-	public void scanHorizontalSections() throws IOException {
+	public String scanHorizontalSections() throws IOException {
 		// start with sections of size 2, horizontal
 		WordsBoard wb = new WordsBoard();
 		WordsValidator wv = new WordsValidator(new WordsDictionary());
@@ -120,12 +120,15 @@ public class WordsBoardScanner {
 			}
 		}
 		
-		System.out.println("(h) " + highestScoringWord + ": [" + highestScoringWordCoords[0]
-				+ ", " + highestScoringWordCoords[1] + "]");
-		System.out.println(highestPointValue + " pts");
+		return highestScoringWord + ": [" + highestScoringWordCoords[0] + ", "
+			+ highestScoringWordCoords[1] + "]" + "\n" + highestPointValue + " pts";
+		
+//		System.out.println("(h) " + highestScoringWord + ": [" + highestScoringWordCoords[0]
+//				+ ", " + highestScoringWordCoords[1] + "]");
+//		System.out.println(highestPointValue + " pts");
 	}
 
-	public void scanVerticalSections() throws IOException {
+	public String scanVerticalSections() throws IOException {
 		// start with sections of size 2, horizontal
 		WordsBoard wb = new WordsBoard();
 		WordsValidator wv = new WordsValidator(new WordsDictionary());
@@ -234,9 +237,12 @@ public class WordsBoardScanner {
 			}
 		}
 		
-		System.out.println("(v) " + highestScoringWord + ": [" + highestScoringWordCoords[0]
-				+ ", " + highestScoringWordCoords[1] + "]");
-		System.out.println(highestPointValue + " pts");
+		return highestScoringWord + ": [" + highestScoringWordCoords[0] + ", "
+		+ highestScoringWordCoords[1] + "]" + "\n" + highestPointValue + " pts";
+		
+//		System.out.println("(v) " + highestScoringWord + ": [" + highestScoringWordCoords[0]
+//				+ ", " + highestScoringWordCoords[1] + "]");
+//		System.out.println(highestPointValue + " pts");
 	}
 
 }
